@@ -1,7 +1,6 @@
 package com.example.todoapp.views.fragments;
 
 import android.os.Bundle;
-
 import android.view.View;
 
 import com.example.todoapp.R;

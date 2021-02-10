@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase;
 import com.example.todoapp.abstracts.model.Repository;
 import com.example.todoapp.models.database.entity.Task;
 
-@androidx.room.Database(entities = {Task.class}, version = 1)
+@androidx.room.Database(entities = {Task.class}, version = 1, exportSchema = false)
 public abstract class Database extends RoomDatabase {
     public abstract Repository.TaskDao taskDao();
 }

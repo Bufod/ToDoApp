@@ -1,5 +1,6 @@
 package com.example.todoapp.backstage.tasks_scope.task_list;
 
+import android.app.TimePickerDialog;
 import android.view.View;
 import android.widget.Toast;
 
@@ -9,6 +10,10 @@ import com.example.todoapp.models.database.entity.Task;
 import com.yuyakaido.android.cardstackview.CardStackView;
 import com.yuyakaido.android.cardstackview.Direction;
 
+/**
+ * Listener реализация, обеспечивающая корректную реакцию на свайпы и обнуления стека отображаемых
+ * задач
+ */
 public abstract class CardStackListener implements com.yuyakaido.android.cardstackview.CardStackListener {
     int positionDisappearedCard;
     @Override
@@ -58,7 +63,9 @@ public abstract class CardStackListener implements com.yuyakaido.android.cardsta
 
     }
 
-    public abstract void onLastCardDetected();
+    public void onLastCardDetected(){
+        getCardStackView().scrollToPosition(0);
+    }
 
     @Override
     public void onCardDisappeared(View view, int position) {

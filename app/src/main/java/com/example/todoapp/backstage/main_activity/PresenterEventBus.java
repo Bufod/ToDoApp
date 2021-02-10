@@ -8,9 +8,23 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
-//Event Bus pattern
-//link: https://www.techyourchance.com/event-bus/
-//link: https://github.com/chermehdi/event-bus/blob/master/src/main/java/io/github/chermehdi/guavabus/EventBus.java
+/**
+ * Реализация шины событий (EventBus pattern) для комуникации между элементами приложения.
+ * Обеспечивает независимость между подписчиками событий и поставщиками.
+ * @see
+ * <ul>
+ *     <li>
+ *         <a href="https://www.techyourchance.com/event-bus/">
+ *             Event Bus: Pros, Cons and Best Practices
+ *         </a>
+ *     </li>
+ *     <li>
+ *         <a href="https://github.com/chermehdi/event-bus/blob/master/src/main/java/io/github/chermehdi/guavabus/EventBus.java">
+ *             Реализация EventBus Guava
+ *         </a>
+ *     </li>
+ * </ul>
+ */
 public class PresenterEventBus {
 
     public enum EventType {

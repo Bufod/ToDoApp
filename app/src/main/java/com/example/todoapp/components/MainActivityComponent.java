@@ -1,8 +1,5 @@
 package com.example.todoapp.components;
 
-
-//import com.example.todoapp.modules.MainActivityModule;
-
 import androidx.fragment.app.FragmentManager;
 
 import com.example.todoapp.backstage.main_activity.MainActivityScope;

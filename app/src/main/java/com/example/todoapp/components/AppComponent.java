@@ -15,7 +15,6 @@ import javax.inject.Singleton;
 import dagger.BindsInstance;
 import dagger.Component;
 
-
 @Component(
         modules = {
                 DatabaseModule.class

@@ -1,7 +1,6 @@
 package com.example.todoapp.views.fragments;
 
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.Button;
 
@@ -45,10 +44,10 @@ public class TaskEditorFragment extends BaseFragment implements TaskEditorContra
                 rootView.findViewById(R.id.taskTime)
         );
 
-        ((Button)rootView.findViewById(R.id.saveBt))
+        ((Button) rootView.findViewById(R.id.saveBt))
                 .setOnClickListener(presenter.saveBtOnClickListener());
 
-        ((Button)rootView.findViewById(R.id.deleteBt))
+        ((Button) rootView.findViewById(R.id.deleteBt))
                 .setOnClickListener(presenter.deleteBtOnClickListener());
     }
 

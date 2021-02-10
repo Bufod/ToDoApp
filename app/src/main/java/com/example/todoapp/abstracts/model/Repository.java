@@ -18,14 +18,32 @@ public interface Repository {
 
     @Dao
     interface TaskDao{
+
+        /**
+         * Выбор всех задач с фильтром по статусу и дате позже текущего момента
+         * @param status Статус задачи из {@link com.example.todoapp.models.database.entity.Task.Status}
+         * @param currentDate Текущее время
+         * @return List<Task>: список задач
+         */
         @Query("SELECT * FROM task WHERE status = :status AND expiry_date > :currentDate")
         @TypeConverters({StatusConverter.class, DateConverter.class})
         List<Task> getAllWithStatusAndDateBefore(Task.Status status, Date currentDate);
 
+        /**
+         * Выбор всех задач с фильтром по статусу и дате раньше текущего момента
+         * @param status Статус задачи из {@link com.example.todoapp.models.database.entity.Task.Status}
+         * @param currentDate Текущее время
+         * @return List<Task>: список задач
+         */
         @Query("SELECT * FROM task WHERE status = :status AND expiry_date <= :currentDate")
         @TypeConverters({StatusConverter.class, DateConverter.class})
         List<Task> getAllWithStatusAndDateAfter(Task.Status status, Date currentDate);
 
+        /**
+         * Выбор всех задач с фильтром по статусу
+         * @param status Статус задачи из {@link com.example.todoapp.models.database.entity.Task.Status}
+         * @return List<Task>: список задач
+         */
         @Query("SELECT * FROM task WHERE status = :status")
         @TypeConverters({StatusConverter.class})
         List<Task> getAllWithStatus(Task.Status status);

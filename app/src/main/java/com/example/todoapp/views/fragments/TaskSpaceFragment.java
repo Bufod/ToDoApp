@@ -1,21 +1,12 @@
 package com.example.todoapp.views.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.viewpager2.widget.ViewPager2;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
 
 import com.example.todoapp.R;
 import com.example.todoapp.abstracts.contracts.TaskSpaceContract;
 import com.example.todoapp.abstracts.view.BaseFragment;
 import com.example.todoapp.backstage.InjectorHelper;
-import com.example.todoapp.presenters.TaskListPresenter;
 import com.example.todoapp.presenters.TaskSpacePresenter;
 import com.google.android.material.tabs.TabLayout;
 

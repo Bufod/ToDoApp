@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.todoapp.abstracts.presenter.BasePresenter;
 
-public abstract class BaseCompatActivity extends AppCompatActivity implements BaseView {
 
+public abstract class BaseCompatActivity extends AppCompatActivity implements BaseView {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

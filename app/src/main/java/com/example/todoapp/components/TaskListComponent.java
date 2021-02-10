@@ -4,7 +4,6 @@ import com.example.todoapp.views.fragments.TaskListFragment;
 
 import dagger.Subcomponent;
 
-
 @Subcomponent
 public interface TaskListComponent {
 

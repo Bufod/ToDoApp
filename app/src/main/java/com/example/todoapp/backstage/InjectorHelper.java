@@ -13,11 +13,6 @@ import com.example.todoapp.components.TaskEditorComponent;
 import com.example.todoapp.components.TaskListComponent;
 import com.example.todoapp.modules.TaskModule;
 
-import javax.inject.Inject;
-
-import dagger.Module;
-import dagger.Provides;
-
 
 public class InjectorHelper {
     private static final InjectorHelper INJECTOR_HELPER = new InjectorHelper();
@@ -27,7 +22,6 @@ public class InjectorHelper {
     TaskComponent taskComponent;
     TaskListComponent taskListComponent;
     TaskEditorComponent taskEditorComponent;
-    CrudTaskRunnableComponent crudTaskRunnableComponent;
 
     public AppComponent initAppComponent(Context context){
         appComponent = DaggerAppComponent.builder()

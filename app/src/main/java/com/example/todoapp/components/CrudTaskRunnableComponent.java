@@ -8,9 +8,4 @@ import dagger.Subcomponent;
 @Subcomponent
 public interface CrudTaskRunnableComponent {
     void inject(CrudTaskRunnable crudTaskRunnable);
-
-//    @TasksScope
-//    AdapterStateHandler provideAdapterStateHandler();
-//
-//    RecycleAdapter getRecycleAdapter();
 }

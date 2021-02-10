@@ -8,6 +8,9 @@ import androidx.annotation.NonNull;
 
 import javax.inject.Inject;
 
+/**
+ * Слушает очередь сообщений реагирующих на изменение в БД и требующих обновления адаптера
+ */
 public class AdapterStateHandler extends Handler {
 
     RecycleAdapter recycleAdapter;
@@ -17,10 +20,6 @@ public class AdapterStateHandler extends Handler {
         super(Looper.getMainLooper());
         this.recycleAdapter = recycleAdapter;
     }
-
-//    public AdapterStateHandler() {
-//        super(Looper.getMainLooper());
-//    }
 
     @Override
     public void handleMessage(@NonNull Message msg) {

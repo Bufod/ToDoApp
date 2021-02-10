@@ -15,6 +15,9 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 
+/**
+ * Listener реализация {@link DatePickerDialog.OnDateSetListener}
+ */
 public class TaskDateListener implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
     @Inject
@@ -33,7 +36,6 @@ public class TaskDateListener implements View.OnClickListener, DatePickerDialog.
     @Override
     public void onClick(View v) {
         Calendar calendar = Calendar.getInstance();
-
 
         try {
             Date date = dateFormatter.getDate(dateTV.getText().toString());

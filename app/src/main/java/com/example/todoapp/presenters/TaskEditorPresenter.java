@@ -2,7 +2,6 @@ package com.example.todoapp.presenters;
 
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -83,16 +82,10 @@ public class TaskEditorPresenter
 
         if (currentTask != null) {
             taskName.setText(currentTask.name);
-
             taskDescription.setText(currentTask.description);
-
             taskDate.setText(new DateFormatter().getDate(currentTask.expiryDate));
-
             taskTime.setText(new TimeFormatter().getTime(currentTask.expiryDate));
-
             taskStatus.setSelection(adapter.getPosition(currentTask.status));
-
-
         } else {
             Date date = Calendar.getInstance().getTime();
             taskDate.setText(new DateFormatter().getDate(date));

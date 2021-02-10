@@ -1,7 +1,6 @@
 package com.example.todoapp.views.activities;
 
 import android.os.Bundle;
-import android.widget.Button;
 
 import com.example.todoapp.R;
 import com.example.todoapp.abstracts.contracts.MainActivityContract;
@@ -9,7 +8,6 @@ import com.example.todoapp.abstracts.presenter.BasePresenter;
 import com.example.todoapp.abstracts.view.BaseCompatActivity;
 import com.example.todoapp.abstracts.view.BaseView;
 import com.example.todoapp.backstage.InjectorHelper;
-import com.example.todoapp.components.MainActivityComponent;
 import com.example.todoapp.presenters.MainActivityPresenter;
 
 import javax.inject.Inject;
@@ -43,10 +41,10 @@ public class MainActivity extends BaseCompatActivity implements MainActivityCont
 
     @Override
     public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() <= 1) {
+        if (getSupportFragmentManager().getBackStackEntryCount() <= 1) {
             super.onBackPressed();
         } else {
-            getFragmentManager().popBackStack();
+            getSupportFragmentManager().popBackStack();
         }
     }
 

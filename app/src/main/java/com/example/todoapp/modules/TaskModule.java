@@ -12,20 +12,13 @@ import dagger.Provides;
 public class TaskModule {
     @Provides
     @TasksScope
-    public Repository.TaskDao provideTaskDao(Database database){
+    public Repository.TaskDao provideTaskDao(Database database) {
         return database.taskDao();
     }
 
     @Provides
     @TasksScope
-    public RecycleAdapter provideRecycleAdapter(){
+    public RecycleAdapter provideRecycleAdapter() {
         return new RecycleAdapter();
     }
-
-
-//    @Provides
-//    @TasksScope
-//    public AdapterStateHandler provideAdapterStateHandler(){
-//        return new AdapterStateHandler();
-//    }
 }

@@ -1,10 +1,9 @@
 package com.example.todoapp.abstracts.presenter;
 
-import android.view.View;
-
 import com.example.todoapp.abstracts.view.BaseView;
 
-public abstract class BasePresenter<V extends BaseView> implements BaseMvpPresenter<V> {
+//Абстрактная реализация интерфейсной логики для прмитивных методов
+public abstract class BasePresenter<V extends BaseView> implements BasePresenterInterface<V> {
 
     protected V view;
 

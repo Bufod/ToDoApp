@@ -17,7 +17,7 @@ public abstract class DatabaseModule {
 
     @Provides
     @Singleton
-    static Database providesDatabase(@NonNull Context appContext){
+    static Database providesDatabase(@NonNull Context appContext) {
         return Room.databaseBuilder(
                 appContext,
                 Database.class,

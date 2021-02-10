@@ -9,6 +9,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+/**
+ * Реализация CRUD спецификации работы с БД в виде запускаемой в потоке задачи
+ */
 public class CrudTaskRunnable implements Runnable {
 
     InjectorHelper injectorHelper = InjectorHelper.getInstance();

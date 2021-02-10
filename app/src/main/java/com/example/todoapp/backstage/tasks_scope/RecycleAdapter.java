@@ -14,7 +14,6 @@ import com.example.todoapp.models.database.entity.Task;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -23,16 +22,11 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     private List<Task> localDataSet;
     private RecycleViewItemClickListener itemClickListener;
 
-    /**
-     * Provide a reference to the type of views that you are using
-     * (custom ViewHolder).
-     */
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textTv, dataTimeTv, descriptionTv;
 
         public ViewHolder(View view) {
             super(view);
-            // Define click listener for the ViewHolder's View
 
             textTv = (TextView) view.findViewById(R.id.textTv);
             dataTimeTv = (TextView) view.findViewById(R.id.data_timeTv);
@@ -86,22 +80,16 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         localDataSet = new ArrayList<>();
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.item, viewGroup, false);
 
         return new ViewHolder(view);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-
-        // Get element from your dataset at this position and replace the
-        // contents of the view with that element
         Task task = localDataSet.get(position);
         viewHolder.getTextTv().setText(task.name);
         viewHolder.getDataTimeTv().setText(
@@ -114,8 +102,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         viewHolder.getDescriptionTv().setText(task.description);
     }
 
-
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return localDataSet.size();

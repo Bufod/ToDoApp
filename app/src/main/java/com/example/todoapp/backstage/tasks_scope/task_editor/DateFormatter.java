@@ -8,6 +8,10 @@ import java.util.Locale;
 
 import javax.inject.Inject;
 
+/**
+ * Форматирует дату
+ * @see SimpleDateFormat
+ */
 public class DateFormatter extends SimpleDateFormat {
 
     @Inject

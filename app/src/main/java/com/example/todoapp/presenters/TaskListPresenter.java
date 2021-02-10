@@ -27,7 +27,7 @@ import static com.example.todoapp.abstracts.contracts.TaskListContract.MSG;
 
 public class TaskListPresenter
         extends BasePresenter<TaskListContract.View>
-        implements TaskListContract.Presenter {
+        implements TaskListContract.PresenterInterface {
 
     @Inject
     RecycleAdapter recycleAdapter;
@@ -62,16 +62,10 @@ public class TaskListPresenter
             public CardStackView getCardStackView() {
                 return swipeStack;
             }
-
-            @Override
-            public void onLastCardDetected() {
-                swipeStack.scrollToPosition(0);
-            }
         };
 
         CardStackLayoutManager cardStackLayoutManager =
                 new CardStackLayoutManager(view.getContext(), cardStackListener);
-
         cardStackLayoutManager.setDirections(Direction.FREEDOM);
         swipeStack.setLayoutManager(cardStackLayoutManager);
         swipeStack.setAdapter(recycleAdapter);

@@ -31,16 +31,6 @@ public class Task implements Serializable {
     @ColumnInfo(name = "description")
     public String description;
 
-    public Task() {
-        status = Status.IN_WORK;
-    }
-
-    public Task(String name, @NonNull Status status, Date expiryDate) {
-        this.name = name;
-        this.status = status;
-        this.expiryDate = expiryDate;
-    }
-
     public Task(String name, @NonNull Status status, Date expiryDate, String description) {
         this.name = name;
         this.status = status;

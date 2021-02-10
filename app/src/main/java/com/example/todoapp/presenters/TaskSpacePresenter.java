@@ -12,7 +12,7 @@ import javax.inject.Inject;
 
 public class TaskSpacePresenter
         extends BasePresenter<TaskSpaceContract.View>
-        implements TaskSpaceContract.Presenter {
+        implements TaskSpaceContract.PresenterInterface {
 
     String[] tabName;
 

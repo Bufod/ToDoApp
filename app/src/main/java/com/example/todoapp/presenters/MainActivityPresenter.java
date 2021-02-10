@@ -5,18 +5,17 @@ import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.todoapp.R;
-import com.example.todoapp.abstracts.presenter.BasePresenter;
 import com.example.todoapp.abstracts.contracts.MainActivityContract;
+import com.example.todoapp.abstracts.presenter.BasePresenter;
 import com.example.todoapp.backstage.main_activity.PresenterEventBus;
 import com.example.todoapp.views.fragments.TaskEditorFragment;
-import com.example.todoapp.views.fragments.TaskListFragment;
 import com.example.todoapp.views.fragments.TaskSpaceFragment;
 
 import javax.inject.Inject;
 
 public class MainActivityPresenter
         extends BasePresenter<MainActivityContract.View>
-        implements MainActivityContract.Presenter{
+        implements MainActivityContract.Presenter {
 
     @Inject
     FragmentManager fragmentManager;
@@ -29,7 +28,7 @@ public class MainActivityPresenter
     }
 
     @Inject
-    protected void subscribe(){
+    protected void subscribe() {
         presenterEventBus.subscribe(
                 this,
                 PresenterEventBus.EventType.SELECTED_TASK,
@@ -54,13 +53,9 @@ public class MainActivityPresenter
     }
 
     public void goToTaskSpaceFragment() {
-        goToTaskSpaceFragment(null);
-    }
-
-    public void goToTaskSpaceFragment(Bundle bundle) {
         fragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
-                .replace(R.id.workSpace, TaskSpaceFragment.class, bundle)
+                .replace(R.id.workSpace, TaskSpaceFragment.class, null)
                 .commit();
     }
 

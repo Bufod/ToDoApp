@@ -14,6 +14,9 @@ import java.util.Objects;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+/**
+ * Listener реализация {@link TimePickerDialog.OnTimeSetListener}
+ */
 public class TaskTimeListener implements View.OnClickListener, TimePickerDialog.OnTimeSetListener{
 
     @Inject
